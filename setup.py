@@ -28,7 +28,8 @@ def setup_environment():
         'requests': '2.31.0',
         'PyQt6': '6.4.0',
         'plotly': '5.13.0',
-        'packaging': '23.0'
+        'packaging': '23.0',
+        'openai': '1.0.0'  # Added OpenAI package
     }
     
     # Create a log dictionary
@@ -135,6 +136,7 @@ def setup_environment():
         import requests
         import PyQt6
         import plotly
+        import openai  # Added OpenAI import verification
         
         print("\nAll packages installed successfully!")
         print(f"Pandas version: {pandas.__version__}")
@@ -144,6 +146,7 @@ def setup_environment():
         print(f"requests version: {requests.__version__}")
         print(f"PyQt6 version: {PyQt6.QtCore.QT_VERSION_STR}")
         print(f"plotly version: {plotly.__version__}")
+        print(f"openai version: {openai.__version__}")  # Added OpenAI version display
         
         return True
     except ImportError as e:
